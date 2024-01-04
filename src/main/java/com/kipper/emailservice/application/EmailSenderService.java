@@ -1,22 +1,25 @@
 package com.kipper.emailservice.application;
 
+import com.kipper.emailservice.adapters.EmailSenderGateway;
 import com.kipper.emailservice.core.EMailSenderUserCase;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class EmailSenderService  implements EMailSenderUserCase {
 
 
-    private final EMailSenderGateway eMailSenderGateway;
+    private final EmailSenderGateway eMailSenderGateway;
 
 
     @Autowired
-    public EmailSenderService(EMailSenderGateway eMailSenderGatewat){
+    public EmailSenderService(EmailSenderGateway eMailSenderGatewat){
+
+        this.eMailSenderGateway = eMailSenderGatewat;
 
     }
 
 
     @Override
     public void sendEmail(String to, String subject, String body) {
-
+        this.eMailSenderGateway.sendEmail(to,subject,body);
     }
 }
