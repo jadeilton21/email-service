@@ -2,6 +2,7 @@ package com.kipper.emailservice.controllers;
 
 
 import com.kipper.emailservice.application.EmailSenderService;
+import com.kipper.emailservice.core.EmailRequest;
 import com.kipper.emailservice.core.exceptions.EmailServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
