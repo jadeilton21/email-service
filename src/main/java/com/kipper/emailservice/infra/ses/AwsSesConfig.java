@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AwsSesConfig {
+
+
     @Value("${aws.accessKeyId}")
     private String accessKeyId;
 
@@ -24,9 +26,10 @@ public class AwsSesConfig {
     public AmazonSimpleEmailService amazonSimpleEmailService() {
         return AmazonSimpleEmailServiceClientBuilder.standard()
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKeyId, secretKey)))
-                .withRegion(awsRegion)
-                .build();
+                .withRegion(awsRegion).build();
     }
+
+
 
 
 }
