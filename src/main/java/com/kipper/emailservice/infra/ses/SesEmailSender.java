@@ -25,7 +25,7 @@ public class SesEmailSender implements EmailSenderGateway {
 
 
         SendEmailRequest request = new SendEmailRequest()
-                .withSource("jadeilton.felix107@academico.umj.edu.br")
+                .withSource("jadeiltondm@gmail.com")
                 .withDestination(new Destination().withToAddresses(to))
                 .withMessage(new Message()
                         .withSubject(new Content(subject))
