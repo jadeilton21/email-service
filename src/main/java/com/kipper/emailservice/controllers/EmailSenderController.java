@@ -23,7 +23,7 @@ public class EmailSenderController {
 
 
 
-    @PostMapping 
+    @PostMapping()
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequest request){
 
         try{
