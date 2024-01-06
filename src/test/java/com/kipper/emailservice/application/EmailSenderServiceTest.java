@@ -25,7 +25,6 @@ class EmailSenderServiceTest {
     @DisplayName("Deve Devolver Código Http 404 quando Informações estiverem Invalidas...")
     void sendEmail_cenario1()throws Exception {
 
-
         var response = mockMvc
                 .perform(post("/api/email"))
                 .andReturn().getResponse();
