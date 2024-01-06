@@ -27,11 +27,9 @@ class AwsSesConfigTest {
     @DisplayName("Deve Devolver Código Http 404 quando informações forem invalidas..")
     void amazonSimpleEmailService_cenario1() throws Exception{
 
-
         var response = mockMvc
                 .perform(post("/api/email"))
                 .andReturn().getResponse();
-
         assertThat(response.getStatus())
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
