@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailSenderService  implements EMailSenderUserCase {
 
-
     private final EmailSenderGateway eMailSenderGateway;
     @Autowired
     public EmailSenderService(EmailSenderGateway eMailSenderGatewat){
